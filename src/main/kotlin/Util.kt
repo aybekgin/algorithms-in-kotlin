@@ -2,13 +2,14 @@
  * @author aibek.kokanbekov
  */
 
-val UNSORTED = arrayOf(2, 4, 1, 5, 7, 3, 6, 9, 0, 8, 2, 3)
+val UNSORTED = listOf(2, 4, 1, 5, 7, 3, 6, 9, 0, 8, 2, 3)
 
-fun printSorted(alg: (Array<Int>) -> Array<Int>) {
+fun printSorted(alg: (List<Int>) -> List<Int>) {
     print("Unsorted -> ")
     UNSORTED.forEach { print("$it ") }
-    val sorted = alg.invoke(UNSORTED)
     println()
+    val sorted = alg.invoke(UNSORTED)
     print("Sorted   -> ")
     sorted.forEach { print("$it ") }
+    println()
 }
